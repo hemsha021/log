@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+    android:id="@+id/bottom_sheet"
+    android:layout_width="match_parent"
+    android:layout_height="320sp"
+    android:layout_gravity="bottom"
+    android:background="@drawable/back_white_round_top_50">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_gravity="bottom"
+        android:layout_width="match_parent"
+        android:layout_height="320sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/gl60"
+        app:layout_constraintBottom_toBottomOf="parent">
+
+        <ImageView
+            android:id="@+id/icPremium"
+            android:layout_width="96sp"
+            android:layout_height="96sp"
+            android:padding="10sp"
+            android:layout_marginTop="28sp"
+            app:srcCompat="@drawable/ic_logo_premium_dark"
+            app:layout_constraintBottom_toTopOf="@id/tv1"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"/>
+
+        <TextView
+            android:id="@+id/tv1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:fontFamily="@font/proxima_bold"
+            android:text="PREMIUM"
+            android:textColor="@color/black"
+            android:textSize="24sp"
+            app:layout_constraintBottom_toTopOf="@id/tv2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/icPremium" />
+
+        <TextView
+            android:id="@+id/tv2"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="PREMIUM USER - GET INSTANT NOTIFICATION"
+            android:textColor="@color/black"
+            android:textSize="12sp"
+            android:fontFamily="@font/proxima_regular"
+            app:layout_constraintBottom_toTopOf="@+id/btnPlanBottom"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+        <Button
+            android:id="@+id/btnPlanBottom"
+            android:layout_width="match_parent"
+            android:layout_height="56sp"
+            android:layout_marginStart="80sp"
+            android:layout_marginTop="8sp"
+            android:layout_marginEnd="80sp"
+            android:includeFontPadding="false"
+            android:text="Get Premium"
+            android:textAllCaps="false"
+            android:textSize="18sp"
+            android:fontFamily="@font/proxima_bold"
+            android:background="@drawable/back_color_primary_round_15"
+            android:layout_marginBottom="24sp"
+            android:textColor="@color/white"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintTop_toBottomOf="@id/tv2"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent" />
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+</LinearLayout>
+
+    <!--app:behavior_hideable="true"
+    android:focusedByDefault="false"
+    app:layout_behavior="com.google.android.material.bottomsheet.BottomSheetBehavior"-->

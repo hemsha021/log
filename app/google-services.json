@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "124143528527",
+    "firebase_url": "https://app-001-cd477.firebaseio.com",
+    "project_id": "app-001-cd477",
+    "storage_bucket": "app-001-cd477.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:124143528527:android:e819ed9035a4652ab6983a",
+        "android_client_info": {
+          "package_name": "vion.logtracks"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "124143528527-8ope3p23q55fcq35a8idvd5ib24is145.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCrHHRO8BfjnkxMnEG8Umi3egIv30U52D8"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "124143528527-8ope3p23q55fcq35a8idvd5ib24is145.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

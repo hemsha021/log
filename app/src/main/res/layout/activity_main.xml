@@ -1,0 +1,259 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="vion.logtracks.activities.MainActivity"
+    android:fillViewport="true">
+
+    <RelativeLayout
+        android:orientation="vertical"
+        android:id="@+id/rootView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <include
+            layout="@layout/activity_main_back"/>
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent"
+                app:layout_constraintBottom_toTopOf="@id/gl50">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glvStart"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.06"/>
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/glvEnd"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.94"/>
+
+                <TextView
+                    android:id="@+id/tvAddNumber"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_bold"
+                    android:text="Add Number to Track"
+                    android:textColor="@color/black"
+                    android:textSize="22sp"
+                    app:layout_constraintBottom_toTopOf="@id/etvName"
+                    app:layout_constraintStart_toStartOf="@id/glvStart"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <EditText
+                    android:id="@+id/etvName"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="18sp"
+                    android:imeOptions="actionDone"
+                    android:inputType="text"
+                    android:maxLines="1"
+                    android:padding="12dp"
+                    android:textColor="@color/black"
+                    android:hint="Enter Name"
+                    android:background="@null"
+                    android:textColorHint="@color/back_grey"
+                    app:layout_constraintBottom_toTopOf="@id/etvPhoneNumber"
+                    app:layout_constraintEnd_toEndOf="@id/glvEnd"
+                    app:layout_constraintStart_toStartOf="@id/glvStart"
+                    app:layout_constraintTop_toBottomOf="@id/tvAddNumber" />
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/glvEnd"
+                    app:layout_constraintStart_toStartOf="@id/glvStart"
+                    app:layout_constraintTop_toBottomOf="@id/etvName"/>
+
+                <LinearLayout
+                    android:id="@+id/etvPhoneNumber"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8sp"
+                    android:gravity="center"
+                    android:orientation="horizontal"
+                    android:paddingStart="10sp"
+                    android:paddingEnd="10sp"
+                    app:layout_constraintEnd_toEndOf="@id/glvEnd"
+                    app:layout_constraintStart_toStartOf="@id/glvStart"
+                    app:layout_constraintTop_toBottomOf="@id/etvName"
+                    app:layout_constraintBottom_toTopOf="@id/btnStartTracking">
+
+                    <com.hbb20.CountryCodePicker
+                        android:id="@+id/ccp"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        app:ccpDialog_backgroundColor="@color/white"
+                        app:ccpDialog_textColor="@color/black"
+                        app:ccp_contentColor="@color/black"
+                        app:ccpDialog_allowSearch="true"
+                        app:ccp_autoDetectCountry="true"
+                        app:ccp_showFlag="false"
+                        app:ccp_showNameCode="false" />
+
+                    <EditText
+                        android:id="@+id/etvPhoneNumberText"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:digits="0123456789"
+                        android:hint="Phone Number"
+                        android:textColorHint="@color/back_grey"
+                        android:textColor="@color/black"
+                        android:inputType="phone"
+                        android:maxLength="15"
+                        android:paddingTop="12dp"
+                        android:background="@null"
+                        android:paddingBottom="12dp" />
+                </LinearLayout>
+
+                <View
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:background="@color/black"
+                    app:layout_constraintEnd_toEndOf="@id/glvEnd"
+                    app:layout_constraintStart_toStartOf="@id/glvStart"
+                    app:layout_constraintTop_toBottomOf="@id/etvPhoneNumber"/>
+
+                <LinearLayout
+                    android:id="@+id/btnStartTracking"
+                    android:layout_width="0dp"
+                    android:layout_height="58dp"
+                    android:layout_marginTop="8sp"
+                    android:background="@drawable/back_color_primary_round_15"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/glvEnd"
+                    app:layout_constraintStart_toStartOf="@id/glvStart"
+                    android:orientation="horizontal">
+
+                    <TextView
+                        android:layout_width="0dp"
+                        android:layout_weight="0.8"
+                        android:gravity="center_vertical"
+                        android:layout_marginStart="28sp"
+                        android:layout_height="match_parent"
+                        android:includeFontPadding="false"
+                        android:text="Start Tracking"
+                        android:textSize="18dp"
+                        android:fontFamily="@font/proxima_bold"
+                        android:textAllCaps="false"
+                        android:textColor="@color/white" />
+
+                    <LinearLayout
+                        android:layout_width="0dp"
+                        android:layout_weight="0.2"
+                        android:layout_height="match_parent"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="24sp"
+                            android:layout_height="24sp"
+                            android:src="@drawable/ic_btn_image"/>
+
+                    </LinearLayout>
+
+
+                </LinearLayout>
+
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl50"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.47"/>
+
+            <androidx.constraintlayout.widget.Guideline
+                android:id="@+id/gl60"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                app:layout_constraintGuide_percent="0.6"/>
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toBottomOf="@id/gl60"
+                app:layout_constraintBottom_toBottomOf="parent">
+
+                <ImageView
+                    android:id="@+id/icPremium"
+                    android:layout_width="80sp"
+                    android:layout_height="80sp"
+                    android:padding="10sp"
+                    android:layout_marginTop="28sp"
+                    app:srcCompat="@drawable/ic_logo_premium"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"/>
+
+                <TextView
+                    android:id="@+id/tv1"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:fontFamily="@font/proxima_bold"
+                    android:text="PREMIUM"
+                    android:textColor="@color/white"
+                    android:textSize="24sp"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/icPremium" />
+
+                <TextView
+                    android:id="@+id/tv2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="PREMIUM USER - GET INSTANT NOTIFICATION"
+                    android:textColor="@color/white"
+                    android:textSize="12sp"
+                    android:fontFamily="@font/proxima_regular"
+                    app:layout_constraintBottom_toTopOf="@+id/btnPlan"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv1" />
+
+                <Button
+                    android:id="@+id/btnPlan"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginStart="80sp"
+                    android:layout_marginTop="8sp"
+                    android:layout_marginEnd="80sp"
+                    android:includeFontPadding="false"
+                    android:text="Get Premium"
+                    android:textAllCaps="false"
+                    android:textSize="18sp"
+                    android:fontFamily="@font/proxima_bold"
+                    android:background="@drawable/back_white_round_14"
+                    android:layout_marginBottom="24sp"
+                    android:textColor="@color/colorPrimary"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv2"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </RelativeLayout>
+</ScrollView>

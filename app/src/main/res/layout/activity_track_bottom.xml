@@ -1,0 +1,80 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="horizontal"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:background="@color/white"
+    android:paddingStart="10dp"
+    android:paddingEnd="10dp">
+
+        <LinearLayout
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:gravity="center"
+            android:layout_weight="1">
+
+            <ImageView
+                android:layout_width="10sp"
+                android:layout_height="10sp"
+                android:layout_gravity="center"
+                android:layout_marginStart="10sp"
+                android:background="@drawable/circle_green_30"/>
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Online"
+                android:textColor="@color/black"
+                android:textSize="16sp"
+                android:layout_marginStart="5sp"
+                android:fontFamily="@font/proxima_semi_bold"/>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="10sp"
+            android:layout_height="10sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10sp"
+            android:background="@drawable/ic_duration"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Duration"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="5sp"
+            android:fontFamily="@font/proxima_semi_bold"/>
+    </LinearLayout>
+
+    <LinearLayout
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:gravity="center"
+        android:layout_weight="1">
+
+        <ImageView
+            android:layout_width="10sp"
+            android:layout_height="10sp"
+            android:layout_gravity="center"
+            android:layout_marginStart="10sp"
+            android:background="@drawable/circle_red_30"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Offline"
+            android:textColor="@color/black"
+            android:textSize="16sp"
+            android:layout_marginStart="5sp"
+            android:fontFamily="@font/proxima_semi_bold"/>
+    </LinearLayout>
+
+</LinearLayout>

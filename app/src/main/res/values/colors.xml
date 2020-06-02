@@ -1,0 +1,49 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!--whole app-->
+    <color name="colorPrimary">#258984</color>
+    <color name="colorPrimaryDark">#1E7D78</color>
+    <color name="colorAccent">#D81B60</color>
+
+    <!--Plan Activity-->
+    <color name="monthly_start">#FF5500</color>
+    <color name="monthly_stop">#FF6E26</color>
+    <color name="monthly_button">#FFFFFF</color>
+    <color name="monthly_tag">#60CCD9</color>
+
+    <color name="three_monthly_start">#F85600</color>
+    <color name="three_monthly_stop">#FA6B1F</color>
+    <color name="three_monthly_button">#13BBE7</color>
+    <color name="three_monthly_tag">#DBA009</color>
+
+    <color name="weekly_start">#C24400</color>
+    <color name="weekly_stop">#F55600</color>
+    <color name="weekly_button">#2BAA12</color>
+
+    <color name="three_month">#FD7E47</color>
+    <color name="month">#FD7E47</color>
+    <color name="week">#FD7E47</color>
+
+    <color name="dialog_button">#004248</color>
+    <!--Basic Colors-->
+    <color name="white">#FFFFFF</color>
+    <color name="black">#010101</color>
+
+    <color name="frag_add_button_back_stop">#FFFFFF</color>
+    <color name="frag_switch_bar_back">#0D8994</color>
+    <color name="txt_color">#004248</color>
+
+    <color name="date_color">#B1B1B1</color>
+
+    <color name="bar_back">#FFE7C5</color>
+
+    <color name="plan_back">#004146</color>
+
+    <color name="back_grey">#EEEEEE</color>
+
+    <color name="red">#E13446</color>
+    <color name="green">#1AD689</color>
+    <color name="back_light">#D9FBFF</color>
+    <color name="back_right">#EEF9FB</color>
+
+</resources>
